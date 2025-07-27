@@ -373,7 +373,18 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG,Sony
 			<div class="col-md-3 ftr_navi ftr">
 				<h3>Navigation</h3>
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+	<!-- 新增语言切换按钮 -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-language"></i> Language <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html" data-lang="en">English</a></li>
+                            <li><a href="russian.html" data-lang="ru">Russian</a></li>
+                        </ul>
+                    </li>
 				</ul>
 			</div>
 			<div class="col-md-3 get_in_touch ftr">
@@ -419,7 +430,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG,Sony
 			});
 		});
 	</script>
-	<!-- 语言切换脚本 -->
+    <!-- 语言切换脚本 -->
     <script>
         $(document).ready(function () {
             // 获取用户之前选择的语言
