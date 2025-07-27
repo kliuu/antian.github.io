@@ -141,7 +141,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG,Sony
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-language"></i> Язык <span class="caret"></span>
+                                    <i class="fa fa-language"></i> Language <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="index.html" data-lang="en">English</a></li>
@@ -424,25 +424,12 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG,Sony
         $(document).ready(function () {
             // 获取用户之前选择的语言
             var currentLang = localStorage.getItem('lang') || 'en';
-            setLanguage(currentLang);
-
-            // 监听语言切换按钮的点击事件
+            
+            // 保存语言选择到localStorage
             $('.dropdown-menu a').on('click', function (e) {
-                e.preventDefault();
                 var lang = $(this).data('lang');
-                setLanguage(lang);
                 localStorage.setItem('lang', lang);
             });
-
-            function setLanguage(lang) {
-                if (lang === 'en') {
-                    $('[data-lang-key$="_zh"]').hide();
-                    $('[data-lang-key$="_en"]').show();
-                } else {
-                    $('[data-lang-key$="_en"]').hide();
-                    $('[data-lang-key$="_zh"]').show();
-                }
-            }
         });
     </script>
 	<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>

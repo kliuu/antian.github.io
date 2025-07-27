@@ -144,7 +144,7 @@ Smartphone Compatible web template, free web designs for Nokia, Samsung, LG,Sony
                                         <i class="fa fa-language"></i> Language <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="russian.html" data-lang="en">English</a></li>
+                                        <li><a href="index.html" data-lang="en">English</a></li>
                                         <li><a href="russian.html" data-lang="ru">Russian</a></li>
                                     </ul>
                                 </li>
@@ -420,30 +420,17 @@ When it comes to precision parts, there's no room for error. That's why at our c
 			});
 		});
 	</script>
-	<!-- 语言切换脚本 -->
+    <!-- 语言切换脚本 -->
     <script>
         $(document).ready(function () {
             // 获取用户之前选择的语言
             var currentLang = localStorage.getItem('lang') || 'en';
-            setLanguage(currentLang);
-
-            // 监听语言切换按钮的点击事件
+            
+            // 保存语言选择到localStorage
             $('.dropdown-menu a').on('click', function (e) {
-                e.preventDefault();
                 var lang = $(this).data('lang');
-                setLanguage(lang);
                 localStorage.setItem('lang', lang);
             });
-
-            function setLanguage(lang) {
-                if (lang === 'en') {
-                    $('[data-lang-key$="_ru"]').hide();
-                    $('[data-lang-key$="_en"]').show();
-                } else {
-                    $('[data-lang-key$="_en"]').hide();
-                    $('[data-lang-key$="_ru"]').show();
-                }
-            }
         });
     </script>
 	<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
